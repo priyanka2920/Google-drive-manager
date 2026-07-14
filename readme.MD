@@ -10,18 +10,21 @@ A lightweight Streamlit app for searching, previewing, and downloading files fro
 - 👀 Inline previews for images, audio, video, and text files
 - ⬇️ On-demand downloads — files are only fetched from Drive when you click "Load file," not automatically
 - ⚡ Search is gated behind a form and results are cached per session, so the Drive API isn't hit on every keystroke or rerun
-
+- 
+> **Note:** This repository does not include `credentials.json` or `token.json` for security reasons. Follow the setup instructions below to generate them.
+> 
 ## Project structure
 
 ```
 drive_manager/
 ├── app.py              # Streamlit UI and app flow
 ├── auth.py             # Google OAuth authentication and token management
-├── drive_service.py     # Google Drive API wrapper (search, download, stats)
-├── config.py            # Shared constants (scopes, file paths, limits)
+├── drive_service.py    # Google Drive API wrapper (search, download, stats)
+├── config.py           # Shared constants (scopes, file paths, limits)
 ├── assets/
 │   └── styles.css       # Optional custom styling
-├── credentials.json      # Your Google OAuth client secret (not included — see setup)
+├── credentials.json     # Not included. Download from Google Cloud Console (see Setup)
+├── token.json           # Generated automatically after first successful login
 └── requirements.txt
 ```
 
